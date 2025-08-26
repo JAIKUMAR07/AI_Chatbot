@@ -2,6 +2,7 @@ import express from "express";
 
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import chatbotRoutes from "./routes/chatbot.route.js";
 
 dotenv.config();
 
@@ -22,6 +23,12 @@ mongoose
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
+
+// giving prefix of the route    then remaining is there in charbotRoutes
+// mens saamne ka mila to chatboutRoutes me chala jayega
+// ab usdher aur bhi alg alg route ho skte jo remaining match krega wahi cal krega
+// examle chatboutRoutes me hi  /history , /message ho skta to jo mathc krega wahi execure hoga
+app.use("/bot/v1/", chatbotRoutes);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
