@@ -22,6 +22,8 @@ export const Message = async (req, res) => {
       "how are you": "I am fine, thank you!",
       hii: "Hii how can i help you",
       hello: "Hello! How can I assist you today?",
+      "what is your name": "my name is dhaval.",
+      "kya sbji khaya": "aaloo chana",
     };
     // normali the text jo user add krega taki acha se match ho ske
     const normalizedText = text.toLowerCase().trim();

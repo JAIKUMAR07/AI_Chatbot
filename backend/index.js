@@ -1,5 +1,5 @@
 import express from "express";
-
+import cors from "cors";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import chatbotRoutes from "./routes/chatbot.route.js";
@@ -8,6 +8,8 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
+
+app.use(cors());
 
 //middleware
 app.use(express.json());
