@@ -9,6 +9,8 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
 
+//middleware
+app.use(express.json());
 // data base connection code
 
 mongoose
