@@ -20,10 +20,11 @@ export const Message = async (req, res) => {
     // bot can response with this all text aur que ans
     const botResponses = {
       "how are you": "I am fine, thank you!",
-      hii: "Hii how can i help you",
+      hii: "Hii, how can I help you?",
       hello: "Hello! How can I assist you today?",
-      "what is your name": "my name is dhaval.",
-      "kya sbji khaya": "aaloo chana",
+      "what is your name": "My name is Jaikumar.",
+      bye: "Goodbye! Have a nice day 😊",
+      "thank you": "You're welcome!",
     };
     // normali the text jo user add krega taki acha se match ho ske
     const normalizedText = text.toLowerCase().trim();
